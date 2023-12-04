@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-/*
+/*\
 window.onload = function(){
   if(document.getElementById("aside")){
     spawn();
@@ -24,73 +24,84 @@ function spawn(){
   document.getElementById("aside").appendChild(el);
 }*/
 var drawerlvl = 0;
-var drawerout = false;
+var drawerout = true;
 var flag = true;
-var els = {"Basic":
-      
-          [["Start","Start"],
-          ["OutImage","Output Image"],
-          ["End","End"]],
+var els = {
+  Basic: [
+    ["Start", "Start"],
+    ["OutImage", "Output Image"],
+    ["End", "End"],
+  ],
 
-          "Image Processing":
+  "Image Processing": [
+    ["Measure2", "Measure 2"],
+    ["ImageResize", "Image Resize"],
+    ["ImageFlip", "Image Flip"],
+    ["Measure", "Measure"],
+  ],
 
-          [["Measure2","Measure 2"],
-          ["ImageResize","Image Resize"],
-          ["ImageFlip","Image Flip"],
-          ["Measure","Measure"]],
-          
-          "Machine Learning":
-
-          [["InputModel","Input Model"],
-          ["TorchClassify","Torch Classify"],
-          ["SelectModel","Select Model"],
-          ["TrainTorchClassify","Train Torch Classify"],
-          ["TorchDetect","Torch Detect"],
-          ["TrainTorchDetect","Train Torch Detect"],
-          ["TrainYOLO","Train YOLO"],
-          ["PredictYOLO","Predict YOLO"],
-          ["CameraVideoInput","Camera Video Input"],
-          ["TestIfItWorksNode","Test Achieved"]]
+  "Machine Learning": [
+    ["InputModel", "Input Model"],
+    ["TorchClassify", "Torch Classify"],
+    ["SelectModel", "Select Model"],
+    ["TrainTorchClassify", "Train Torch Classify"],
+    ["TorchDetect", "Torch Detect"],
+    ["TrainTorchDetect", "Train Torch Detect"],
+    ["TrainYOLO", "Train YOLO"],
+    ["PredictYOLO", "Predict YOLO"],
+    ["CameraVideoInput", "Camera Video Input"],
+    ["TestIfItWorksNode", "Test Achieved"],
+  ],
 };
 
 var selectedlibrary = "";
-function slide(){
-  if(drawerout){
-    if(drawerlvl==1){
+function slide() {
+  if (drawerout) {
+    if (drawerlvl == 1) {
       document.getElementById("aside").offsetHeight;
-      document.getElementById("aside").style.animation = "slideinp1 1s forwards";
-    }
-    else if(drawerlvl==2){
+      document.getElementById("aside").style.animation =
+        "slideinp1 1s forwards";
+    } else if (drawerlvl == 2) {
       document.getElementById("aside").offsetHeight;
-      document.getElementById("aside").style.animation = "slideinpall 1s forwards";
-      document.getElementById(selectedlibrary).style.animation = "librarydeselect 1s forwards";
-      document.getElementById(selectedlibrary+"ribbon").style.animation = "librarydeselect 1s forwards";
+      document.getElementById("aside").style.animation =
+        "slideinpall 1s forwards";
+      document.getElementById(selectedlibrary).style.animation =
+        "librarydeselect 1s forwards";
+      document.getElementById(selectedlibrary + "ribbon").style.animation =
+        "librarydeselect 1s forwards";
       selectedlibrary = "";
     }
-    document.getElementById("exec").style.animation = "slideoutbuttongreen 1s forwards";
-    document.getElementById("stop").style.animation = "slideoutbuttonred 1s forwards";
-    document.getElementById("sf").style.animation = "slideoutbuttonsf 1s forwards";
-    document.getElementById("lf").style.animation = "slideoutbuttonlf 1s forwards";
-    document.getElementById("log").style.animation = "slideoutbuttonlog 1s forwards";
+    document.getElementById("exec").style.animation =
+      "slideoutbuttongreen 1s forwards";
+    document.getElementById("stop").style.animation =
+      "slideoutbuttonred 1s forwards";
+    document.getElementById("sf").style.animation =
+      "slideoutbuttonsf 1s forwards";
+    document.getElementById("lf").style.animation =
+      "slideoutbuttonlf 1s forwards";
+    document.getElementById("log").style.animation =
+      "slideoutbuttonlog 1s forwards";
     drawerout = !drawerout;
-    drawerlvl=0;
-  }
-  else{
+    drawerlvl = 0;
+  } else {
     document.getElementById("aside").style.animation = "slideoutp1 1s forwards";
-    document.getElementById("exec").style.animation = "slideinbuttongreen 1s forwards";
-    document.getElementById("stop").style.animation = "slideinbuttonred 1s forwards";
-    document.getElementById("sf").style.animation = "slideinbuttonsf 1s forwards";
-    document.getElementById("lf").style.animation = "slideinbuttonlf 1s forwards";
-    document.getElementById("log").style.animation = "slideinbuttonlog 1s forwards";
+    document.getElementById("exec").style.animation =
+      "slideinbuttongreen 1s forwards";
+    document.getElementById("stop").style.animation =
+      "slideinbuttonred 1s forwards";
+    document.getElementById("sf").style.animation =
+      "slideinbuttonsf 1s forwards";
+    document.getElementById("lf").style.animation =
+      "slideinbuttonlf 1s forwards";
+    document.getElementById("log").style.animation =
+      "slideinbuttonlog 1s forwards";
     drawerout = !drawerout;
-    drawerlvl=1;
+    drawerlvl = 1;
     console.log(drawerlvl);
   }
 }
 
-
 export default () => {
-
   /*const onDragStart = (event, nodeType) => {
     event.dataTransfer.setData('application/reactflow', nodeType);
     event.dataTransfer.effectAllowed = 'move';
@@ -173,13 +184,6 @@ export default () => {
     }, 100);
     
   }*/
-  
 
-
-  return (
-    <aside id="aside">
-      <div className="description">You can drag these nodes to the pane on the right.</div>
-    </aside>
-  );
+  return <aside id="aside"></aside>;
 };
-
