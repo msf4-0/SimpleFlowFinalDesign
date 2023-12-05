@@ -81,13 +81,13 @@
     top: 105%;
   }
   to {
-    top: 91%;
+    top: 85.5%;
   }
 }
 
 @keyframes slideinbuttonred {
   from {
-    top: 91%;
+    top: 85.5%;
   }
   to {
     top: 105%;
@@ -98,13 +98,13 @@
     top: 105%;
   }
   to {
-    top: 84%;
+    top: 74.5%;
   }
 }
 
 @keyframes slideinbuttongreen {
   from {
-    top: 84%;
+    top: 74.5%;
   }
   to {
     top: 105%;
@@ -115,13 +115,13 @@
     top: 105%;
   }
   to {
-    top: 70%;
+    top: 74.5%;
   }
 }
 
 @keyframes slideinbuttonsf {
   from {
-    top: 70%;
+    top: 74.5%;
   }
   to {
     top: 105%;
@@ -132,13 +132,13 @@
     top: 105%;
   }
   to {
-    top: 77%;
+    top: 85.5%;
   }
 }
 
 @keyframes slideinbuttonlf {
   from {
-    top: 77%;
+    top: 85.5%;
   }
   to {
     top: 105%;
@@ -218,24 +218,20 @@ html {
 
 .exec {
   position: absolute;
-  top: 84%;
-  left: 85%;
-  width: 11%;
-  height: 5%;
-  padding: 4px;
-  /* border: 1px solid green; */
-  /* border: 2px solid limegreen; */
-  border-radius: 2px;
-  margin-bottom: 10px;
+  top: 74.5%;
+  left: 94%;
+  width: 4%;
+  height: 8%;
+  font-size: 1vw;
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   /* background-color: transparent; */
-  background-color: #3c4048;
+  background-color: white;
   /* border-color: rgba(0, 255, 0, 0.85); */
   /* color: rgba(0, 255, 0, 0.85); */
-  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -246,94 +242,71 @@ html {
 
 .stop {
   position: absolute;
-  top: 91%;
-  left: 85%;
-  width: 11%;
-  height: 5%;
-  padding: 4px;
-  /* border: 1px solid red; */
-  /* border: 2px solid red; */
-  border-radius: 2px;
-  margin-bottom: 10px;
+  top: 85.5%;
+  left: 94%;
+  width: 4%;
+  height: 8%;
+  font-size: 1vw;
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   /* background-color: transparent; */
-  background-color: #3c4048;
+  background-color: white;
   /* border-color: rgba(255, 0, 0, 0.85); */
   /* color: rgba(255, 0, 0, 0.85); */
-  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .sf {
   position: absolute;
-  top: 70%;
-  left: 85%;
-  width: 11%;
-  height: 5%;
-  padding: 4px;
+  top: 74.5%;
+  left: 88.5%;
+  width: 4%;
+  height: 8%;
   font-size: 1vw;
-  /* border: 1px solid red; */
-  /* border: 2px solid rgba(0, 0, 255, 0.85); */
-  border-radius: 2px;
-  margin-bottom: 10px;
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
-  /* background-color: transparent; */
-  background-color: #3c4048;
-  /* border-color: rgba(0, 0, 255, 0.85); */
-  /* border-color: blue; */
-  /* color: rgba(0, 0, 255, 0.85); */
-  color: white;
+  background-color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .lf {
   position: absolute;
-  top: 77%;
-  left: 85%;
-  width: 11%;
-  height: 5%;
-  padding: 4px;
-  /* border: 1px solid red; */
-  /* border: 2px solid blue; */
-  border-radius: 2px;
-  margin-bottom: 10px;
+  top: 85.5%;
+  left: 88.5%;
+  width: 4%;
+  height: 8%;
+  font-size: 1vw;
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   /* background-color: transparent; */
-  background-color: #3c4048;
+  background-color: white;
   /* border-color: rgba(0, 0, 255, 0.85); */
   /* border-color: blue; */
   /* color: rgba(0, 0, 255, 0.85); */
-  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .exec:hover {
-  border: 2px solid black;
   color: white;
-  background-color: limegreen;
   opacity: 0.7;
 }
 
 .sf:hover {
-  border: 2px solid black;
   color: white;
-  background-color: blue;
   opacity: 0.7;
 }
 
 .lf:hover {
-  border: 2px solid black;
   color: white;
-  background-color: blue;
   opacity: 0.7;
 }
 
@@ -341,9 +314,7 @@ html {
   /* border-color: rgba(255, 0, 0, 1); */
   /* color: rgba(255, 0, 0, 1); */
   /* background-color: transparent; */
-  border: 2px solid black;
   color: white;
-  background-color: red;
   opacity: 0.7;
 }
 
@@ -355,8 +326,8 @@ html {
   position: absolute;
   border: 0px solid black;
   border-radius: 5px;
-  left: 0%;
-  top: 90%;
+  right: 0%;
+  bottom: 0%;
 }
 /* .dndflow aside .description {
   margin-bottom: 10px;
@@ -634,52 +605,12 @@ html {
   transform: skewX(-30deg);
 } */
 
-.library {
-  position: absolute;
-  width: 70%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #d9d9d9;
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 20px;
-}
-
-/* .libraryribbon {
-  position: absolute;
-  width: 70%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.863);
-  color: #3c4048;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transform: skewX(30deg);
-} */
-
-.libraryribbon {
-  position: absolute;
-  width: 70%;
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #d9d9d9;
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 /* .library p {
   transform: skewX(30deg);
 } */
 
 #log {
-  width: 70%;
+  width: 73%;
   height: 25%;
   background-color: whitesmoke;
   border: 2px solid black;
@@ -920,10 +851,36 @@ select {
   cursor: pointer;
 }
 
-* {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.library {
+  position: absolute;
+  width: 70%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #d9d9d9;
+  color: black;
+  font-family: "Averia Serif Libre", serif;
+  font-size: 20px;
 }
 
+.libraryribbon {
+  position: absolute;
+  width: 70%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #d9d9d9;
+  font-family: "Averia Serif Libre", serif;
+  color: black;
+}
+
+*:not(.library, .libraryribbon) {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .arrow-expand {
   width: 0px;
   height: 0px;

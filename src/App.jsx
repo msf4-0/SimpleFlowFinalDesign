@@ -61,24 +61,16 @@ const getIdStart = () => `start_${id++}`;
 //Execute Button
 const ExecButton = (props) => {
   return (
-    <div
-      id="exec"
-      className="exec"
-      onClick={props.doIt}
-      style={{ justifyContent: "normal" }}
-    >
-      <div style={{ left: "0%" }}>
+    <div id="exec" className="exec" onClick={props.doIt}>
+      <div>
         <i
           class="bi bi-play-circle"
           style={{
-            color: "white",
-            fontSize: "40px",
-            marginLeft: "55px",
-            marginRight: "30px",
+            color: "black",
+            fontSize: "2vw",
           }}
         ></i>
       </div>
-      <div>EXECUTE</div>
     </div>
   );
 };
@@ -86,24 +78,16 @@ const ExecButton = (props) => {
 //Stop Button
 const StopButton = (props) => {
   return (
-    <div
-      id="stop"
-      className="stop"
-      onClick={props.dontIt}
-      style={{ justifyContent: "normal" }}
-    >
+    <div id="stop" className="stop" onClick={props.dontIt}>
       <div>
         <i
           class="bi bi-stop-circle"
           style={{
-            color: "white",
-            fontSize: "40px",
-            marginLeft: "56px",
-            marginRight: "30px",
+            color: "black",
+            fontSize: "2vw",
           }}
         ></i>
       </div>
-      <div>STOP</div>
     </div>
   );
 };
@@ -111,24 +95,16 @@ const StopButton = (props) => {
 //Save fLOW Button
 const SaveFlowButton = (props) => {
   return (
-    <div
-      id="sf"
-      className="sf"
-      onClick={props.saveit}
-      style={{ justifyContent: "normal" }}
-    >
+    <div id="sf" className="sf" onClick={props.saveit}>
       <div>
         <i
           class="bi bi-floppy"
           style={{
-            color: "white",
-            fontSize: "1vw",
-            marginLeft: "56px",
-            marginRight: "40px",
+            color: "black",
+            fontSize: "2vw",
           }}
         ></i>
       </div>
-      <div>SAVE</div>
     </div>
   );
 };
@@ -136,24 +112,16 @@ const SaveFlowButton = (props) => {
 //load fLOW Button
 const LoadFlowButton = (props) => {
   return (
-    <div
-      id="lf"
-      className="lf"
-      onClick={props.loadit}
-      style={{ justifyContent: "normal" }}
-    >
-      <div style={{ marginBottom: "7px" }}>
+    <div id="lf" className="lf" onClick={props.loadit}>
+      <div>
         <i
           class="bi bi-box-arrow-in-down"
           style={{
-            color: "white",
-            fontSize: "40px",
-            marginLeft: "54px",
-            marginRight: "30px",
+            color: "black",
+            fontSize: "2vw",
           }}
         ></i>
       </div>
-      <div>LOAD</div>
     </div>
   );
 };
@@ -331,9 +299,11 @@ function Flow() {
       newel = document.createElement("div");
       newel.id = "titletext";
       newel.innerHTML = "Save Flow";
-      newel.style.marginTop = "20px";
-      newel.style.marginBottom = "20px";
+      newel.style.marginTop = "10px";
+      newel.style.marginBottom = "10px";
       newel.style.color = "white";
+      newel.style.fontFamily = "DM Serif Display, sans-serif";
+      newel.style.fontSize = "2.5vw";
       title.append(newel);
 
       document.getElementById("contpopup").append(title);
@@ -342,6 +312,8 @@ function Flow() {
       field.id = "fieldname";
       field.style.display = "flex";
       field.style.flexDirection = "row";
+      field.style.justifyContent = "center";
+      field.style.alignItems = "center";
       field.style.marginTop = "55px";
       field.style.marginBottom = "35px";
 
@@ -349,10 +321,13 @@ function Flow() {
       newel.id = "inputlabel";
       newel.innerHTML = "Enter Flow Name: ";
       newel.style.backgroundColor = "#3C4048";
-      newel.style.fontSize = "20px";
+      newel.style.fontSize = "1.4vw";
       newel.style.marginLeft = "15px";
       newel.style.marginRight = "7px";
       newel.style.color = "white";
+      newel.style.fontFamily = "Noto Sans, sans-serif";
+      newel.style.fontWeight = "300";
+      newel.style.width = "40%";
       field.append(newel);
 
       /* the input field */
@@ -384,6 +359,7 @@ function Flow() {
       /* the submit button */
       var submit = document.createElement("div");
       submit.id = "submitpopup";
+      submit.className = "defaultbutton";
       submit.style.backgroundColor = "#616675";
       submit.style.fontSize = "18px";
       submit.style.color = "white";
@@ -394,37 +370,32 @@ function Flow() {
       submit.style.marginRight = "60px";
 
       /*the submit text*/
-      newel = document.createElement("p");
+      newel = document.createElement("div");
       newel.id = "submittext";
       newel.innerHTML = "Save";
-      newel.style.marginLeft = "12px";
-      newel.style.marginRight = "12px";
-      newel.style.marginTop = "7px";
-      newel.style.marginBottom = "7px";
-
       newel.style.color = "white";
+      newel.style.fontSize = "1vw";
       submit.append(newel);
 
       /*the close button*/
       var close = document.createElement("div");
       close.id = "closepopup";
+      close.className = "defaultbutton";
       close.style.backgroundColor = "#616675";
       close.style.fontSize = "18px";
       close.style.color = "white";
       close.style.display = "flex";
       close.style.alignSelf = "center";
       close.style.marginBottom = "10px";
+      newel.style.cursor = "pointer";
       close.style.borderRadius = "5px";
 
       /*the close text*/
-      newel = document.createElement("p");
+      newel = document.createElement("div");
       newel.id = "submittext";
       newel.innerHTML = "Close";
-      newel.style.marginLeft = "10px";
-      newel.style.marginRight = "10px";
-      newel.style.marginTop = "7px";
-      newel.style.marginBottom = "7px";
-
+      newel.style.fontSize = "1vw";
+      newel.style.cursor = "pointer";
       newel.style.color = "white";
       close.append(newel);
 
@@ -936,6 +907,7 @@ function Flow() {
       node.id = "node_" + this.value;
       node.innerHTML = this.value;
       node.className = "defaultlabel";
+      node.style.marginLeft = "10px";
       node.style.cursor = "pointer";
       node.style.width = "150px";
       node.style.position = "relative";
@@ -976,6 +948,7 @@ function Flow() {
           newel.innerHTML = allinputs[x][1];
           newel.style.width =
             document.getElementById("contpopupcont2").style.width;
+          newel.style.marginLeft = "10px";
           newel.addEventListener("click", function () {
             this.remove();
             for (let y = 0; y < Object.keys(allinputs).length; y++) {
@@ -1565,6 +1538,7 @@ function Flow() {
             newel.innerHTML = '<i class="bi bi-list"></i>';
             newel.style.fontSize = "90%";
             newel.style.color = "white";
+            newel.style.fontSize = "3.2vw";
             el.append(newel);
             document.getElementById("aside").append(el);
             var el = document.createElement("div");
@@ -1574,6 +1548,8 @@ function Flow() {
             el.style.color = "black";
             el.style.height = "8%";
             el.style.textAlign = "center";
+            el.style.alignItems = "center";
+            el.style.justifyContent = "center";
             el.style.zIndex = "2";
             el.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
 
@@ -1581,8 +1557,9 @@ function Flow() {
             newel = document.createElement("div");
             newel.id = "librarytitletext";
             newel.innerHTML = "Libraries";
-            newel.style.fontSize = "3.3vw";
-            newel.style.marginLeft = "9%";
+            newel.style.fontSize = "3.5vw";
+            newel.style.fontFamily = "DM Serif Display, sans-serif";
+            newel.style.marginRight = "10%";
 
             el.append(newel);
             document.getElementById("aside").append(el);
@@ -1642,6 +1619,7 @@ function Flow() {
               });
               document.getElementById("aside").append(el);
               var el2 = document.createElement("p");
+              el2.style.fontFamily = "Noto Sans, sans-serif";
               if (keys[i].search("_")) {
                 el2.innerHTML = keys[i].replaceAll("_", " ");
               } else {
@@ -1667,6 +1645,7 @@ function Flow() {
             addLibrary.style.cursor = "pointer";
             addLibrary.innerHTML = "Add Library";
             addLibrary.style.alignSelf = "center";
+            addLibrary.style.fontFamily = "Noto Sans, sans-serif";
             addLibrary.style.marginTop = "10px";
             addLibrary.style.marginBottom = "10px";
 
@@ -1747,6 +1726,8 @@ function Flow() {
     newel = document.createElement("div");
     newel.id = "titletext";
     newel.innerHTML = "Saved Flows";
+    newel.style.fontFamily = "DM Serif Display, sans-serif";
+    newel.style.fontSize = "2.5vw";
     newel.style.paddingRight = "150px";
     newel.style.paddingLeft = "150px";
     newel.style.color = "white";
@@ -1790,6 +1771,8 @@ function Flow() {
           newel.style.color = "black";
           newel.style.paddingTop = "10px";
           newel.style.paddingBottom = "10px";
+          newel.style.fontFamily = "Noto Sans, sans-serif";
+          newel.style.fontWeight = "400";
           newel.style.boxShadow = "0 5px 10px 5px rgba(0, 0, 0, 0.5)";
           newel.innerHTML = data["nameslist"][i];
           newel.onclick = function () {
@@ -1805,12 +1788,13 @@ function Flow() {
         /* the upload button */
         var upload = document.createElement("div");
         upload.id = "uploadflow";
+        upload.className = "defaultbutton";
         upload.style.cursor = "pointer";
         upload.style.display = "flex";
         upload.style.flexDirection = "row";
         upload.style.justifyContent = "center";
         upload.style.alignItems = "center";
-        upload.style.fontSize = "15px";
+        upload.style.fontSize = "1vw";
         upload.style.backgroundColor = "#616675";
         upload.style.textAlign = "center";
         upload.style.marginBottom = "15px";
@@ -1823,12 +1807,9 @@ function Flow() {
         newel = document.createElement("div");
         newel.id = "uploadicon";
         newel.innerHTML = '<i class="bi bi-file-earmark-arrow-up"></i>';
-        newel.style.marginRight = "5px";
-        newel.style.marginLeft = "8px";
-        newel.style.fontSize = "20px";
+        newel.style.fontSize = "1.2vw";
         newel.style.color = "black";
-        newel.style.marginTop = "5px";
-        newel.style.marginBottom = "5px";
+        newel.style.marginRight = "8px";
         upload.append(newel);
 
         /* the upload text */
@@ -1837,8 +1818,6 @@ function Flow() {
         newel.style.color = "white";
         newel.innerHTML = "Upload Files";
         newel.style.marginRight = "8px";
-        newel.style.marginTop = "6px";
-        newel.style.marginBottom = "5px";
         upload.append(newel);
 
         upload.onclick = function () {
@@ -1849,6 +1828,7 @@ function Flow() {
         /*the close button*/
         var closed = document.createElement("div");
         closed.id = "closepopup";
+        closed.className = "defaultbutton";
         closed.style.backgroundColor = "#616675";
         closed.style.fontSize = "20px";
         closed.style.color = "white";
@@ -1866,10 +1846,9 @@ function Flow() {
         newel = document.createElement("div");
         newel.id = "submittext";
         newel.innerHTML = "Close";
-        newel.style.marginLeft = "10px";
-        newel.style.marginRight = "10px";
-        newel.style.marginTop = "6px";
-        newel.style.marginBottom = "7px";
+        newel.style.fontSize = "1vw";
+        newel.style.marginTop = "3px";
+        newel.style.marginBottom = "3px";
         closed.append(newel);
 
         closed.onclick = function () {
