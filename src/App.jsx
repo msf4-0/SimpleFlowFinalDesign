@@ -169,7 +169,7 @@ function slide2() {
     document.getElementById("log").style.animation =
       "slideinbuttonlog 1s forwards";
     hide = true;
-    console.log("closing");
+    console.log("hide");
   }
 }
 
@@ -202,9 +202,9 @@ function slide() {
       "slideoutbuttonlog 1s forwards";
     drawerout = !drawerout;
     drawerlvl = 0;
+    console.log("siu");
   } else {
     if (closed == 0) {
-      console.log("opening");
       document.getElementById("aside").style.animation =
         "slideoutp1 1s forwards";
       document.getElementById("exec").style.animation =
@@ -283,13 +283,14 @@ function Flow() {
       newel.style.display = "flex";
       newel.style.flexDirection = "column";
       newel.style.borderRadius = "15px";
+      document.getElementById("popup").style.height = "32%";
+      document.getElementById("popup").style.width = "40%";
       document.getElementById("popup").append(newel);
 
       /* title */
       var title = document.createElement("div");
       title.id = "titlepopup";
       title.style.backgroundColor = "#808080";
-      title.style.fontSize = "30px";
       title.style.color = "white";
       title.style.borderRadius = "5px 5px 0px 0px";
       title.style.textAlign = "center";
@@ -314,27 +315,27 @@ function Flow() {
       field.style.flexDirection = "row";
       field.style.justifyContent = "center";
       field.style.alignItems = "center";
-      field.style.marginTop = "55px";
-      field.style.marginBottom = "35px";
+      field.style.position = "absolute";
+      field.style.top = "49%";
+      field.style.left = "0%";
+      field.style.width = "100%";
 
       newel = document.createElement("div");
       newel.id = "inputlabel";
       newel.innerHTML = "Enter Flow Name: ";
       newel.style.backgroundColor = "#3C4048";
       newel.style.fontSize = "1.4vw";
-      newel.style.marginLeft = "15px";
-      newel.style.marginRight = "7px";
       newel.style.color = "white";
       newel.style.fontFamily = "Noto Sans, sans-serif";
       newel.style.fontWeight = "300";
-      newel.style.width = "40%";
+      newel.style.width = "30%";
+      newel.style.marginRight = "3%";
       field.append(newel);
 
       /* the input field */
       newel = document.createElement("input");
       newel.id = "inputname";
-      newel.style.width = "47%";
-      newel.style.paddingRight = "80px";
+      newel.style.width = "50%";
       newel.style.height = "10%";
       newel.style.fontSize = "20px";
       newel.style.color = "white";
@@ -342,8 +343,7 @@ function Flow() {
       newel.style.border = "none";
       newel.style.boxShadow = "2px 2px 2px grey";
       newel.style.borderRadius = "0px";
-      newel.style.marginTop = "2px";
-      newel.style.marginRight = "14px";
+
       field.append(newel);
       document.getElementById("contpopup").append(field);
 
@@ -361,13 +361,14 @@ function Flow() {
       submit.id = "submitpopup";
       submit.className = "defaultbutton";
       submit.style.backgroundColor = "#616675";
+      submit.style.position = "absolute";
       submit.style.fontSize = "18px";
       submit.style.color = "white";
       submit.style.display = "flex";
       submit.style.alignSelf = "center";
-      submit.style.marginBottom = "10px";
+      submit.style.top = "82%";
+      submit.style.left = "25%";
       submit.style.borderRadius = "5px";
-      submit.style.marginRight = "60px";
 
       /*the submit text*/
       newel = document.createElement("div");
@@ -385,9 +386,10 @@ function Flow() {
       close.style.fontSize = "18px";
       close.style.color = "white";
       close.style.display = "flex";
-      close.style.alignSelf = "center";
-      close.style.marginBottom = "10px";
-      newel.style.cursor = "pointer";
+      close.style.cursor = "pointer";
+      close.style.position = "absolute";
+      close.style.top = "82%";
+      close.style.right = "25%";
       close.style.borderRadius = "5px";
 
       /*the close text*/
@@ -711,6 +713,7 @@ function Flow() {
     newel = document.createElement("div");
     newel.id = "closewindow";
     newel.innerHTML = "Close";
+    newel.style.fontSize = "1vw";
     newel.style.backgroundColor = "#616675";
     newel.style.position = "absolute";
     newel.className = "defaultbutton";
@@ -744,6 +747,7 @@ function Flow() {
     newel.style.position = "absolute";
     newel.style.top = "92%";
     newel.style.right = "5%";
+    newel.style.fontSize = "1vw";
     newel.addEventListener("click", function () {
       if (document.getElementById("contpopupnodecode")) {
         let lib = document.getElementById("contpopuplibname").value;
@@ -1608,12 +1612,16 @@ function Flow() {
                       methods[i][els[keys[i]][j][1]],
                       colors[i]
                     );
+                  var text = document.createElement("p");
+                  text.innerHTML = els[keys[i]][j][1].replaceAll("_", " ");
+                  text.style.fontSize = "0.8em";
                   var el = document.createElement("div");
                   el.id = els[keys[i]][j][1] + "_" + j;
-                  el.innerHTML = els[keys[i]][j][1].replaceAll("_", " ");
                   el.className = "nodesv2";
+                  el.style.fontSize = "1.3vw";
                   el.addEventListener("dragstart", foo);
                   el.setAttribute("draggable", true);
+                  el.append(text);
                   document.getElementById("sideextend").append(el);
                 }
               });
@@ -1645,6 +1653,7 @@ function Flow() {
             addLibrary.style.cursor = "pointer";
             addLibrary.innerHTML = "Add Library";
             addLibrary.style.alignSelf = "center";
+            addLibrary.style.fontSize = "1.3vw";
             addLibrary.style.fontFamily = "Noto Sans, sans-serif";
             addLibrary.style.marginTop = "10px";
             addLibrary.style.marginBottom = "10px";
@@ -1653,7 +1662,7 @@ function Flow() {
             var iconadd = document.createElement("div");
             iconadd.id = "iconadd";
             iconadd.innerHTML = '<i class="bi bi-plus-square-fill"></i>';
-            iconadd.style.fontSize = "20px";
+            iconadd.style.fontSize = "1.3vw";
             iconadd.style.alignSelf = "center";
             iconadd.style.marginRight = "15px";
             iconadd.style.marginTop = "10px";
@@ -1711,6 +1720,8 @@ function Flow() {
     newel.style.flexDirection = "column";
     newel.style.backgroundColor = "#3c4048";
     newel.style.borderRadius = "15px";
+    document.getElementById("popup").style.height = "auto";
+    document.getElementById("popup").style.width = "auto";
     document.getElementById("popup").append(newel);
 
     /* title */
@@ -1826,21 +1837,21 @@ function Flow() {
         };
 
         /*the close button*/
-        var closed = document.createElement("div");
-        closed.id = "closepopup";
-        closed.className = "defaultbutton";
-        closed.style.backgroundColor = "#616675";
-        closed.style.fontSize = "20px";
-        closed.style.color = "white";
-        closed.style.display = "flex";
-        closed.style.alignSelf = "center";
-        closed.style.marginBottom = "15px";
-        closed.style.marginRight = "29px";
-        closed.style.borderRadius = "5px";
-        closed.style.justifyContent = "center";
-        closed.style.alignItems = "center";
-        closed.style.cursor = "pointer";
-        closed.style.alignSelf = "flex-end";
+        var closed1 = document.createElement("div");
+        closed1.id = "closepopup";
+        closed1.className = "defaultbutton";
+        closed1.style.backgroundColor = "#616675";
+        closed1.style.fontSize = "20px";
+        closed1.style.color = "white";
+        closed1.style.display = "flex";
+        closed1.style.alignSelf = "center";
+        closed1.style.marginBottom = "15px";
+        closed1.style.marginRight = "29px";
+        closed1.style.borderRadius = "5px";
+        closed1.style.justifyContent = "center";
+        closed1.style.alignItems = "center";
+        closed1.style.cursor = "pointer";
+        closed1.style.alignSelf = "flex-end";
 
         /*the close text*/
         newel = document.createElement("div");
@@ -1849,9 +1860,9 @@ function Flow() {
         newel.style.fontSize = "1vw";
         newel.style.marginTop = "3px";
         newel.style.marginBottom = "3px";
-        closed.append(newel);
+        closed1.append(newel);
 
-        closed.onclick = function () {
+        closed1.onclick = function () {
           document.getElementById("blur").style.visibility = "hidden";
           document.getElementById("popup").style.animation =
             "popupout 0.25s forwards";
@@ -1870,7 +1881,7 @@ function Flow() {
           }
           destroyelements("contpopup");
         };
-        cont.append(upload, closed);
+        cont.append(upload, closed1);
         document.getElementById("contpopup").append(cont);
       });
   }

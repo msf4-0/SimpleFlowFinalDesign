@@ -218,10 +218,10 @@ html {
 
 .exec {
   position: absolute;
-  top: 74.5%;
+  top: 72.5%;
   left: 94%;
-  width: 4%;
-  height: 8%;
+  width: 4vw;
+  height: 4vw;
   font-size: 1vw;
   border-radius: 50%;
   display: flex;
@@ -242,10 +242,10 @@ html {
 
 .stop {
   position: absolute;
-  top: 85.5%;
+  top: 84%;
   left: 94%;
-  width: 4%;
-  height: 8%;
+  width: 4vw;
+  height: 4vw;
   font-size: 1vw;
   border-radius: 50%;
   display: flex;
@@ -261,10 +261,10 @@ html {
 
 .sf {
   position: absolute;
-  top: 74.5%;
+  top: 72.5%;
   left: 88.5%;
-  width: 4%;
-  height: 8%;
+  width: 4vw;
+  height: 4vw;
   font-size: 1vw;
   border-radius: 50%;
   display: flex;
@@ -277,10 +277,10 @@ html {
 
 .lf {
   position: absolute;
-  top: 85.5%;
+  top: 84%;
   left: 88.5%;
-  width: 4%;
-  height: 8%;
+  width: 4vw;
+  height: 4vw;
   font-size: 1vw;
   border-radius: 50%;
   display: flex;
@@ -323,10 +323,11 @@ html {
   background-color: grey;
   cursor: pointer;
   z-index: 2;
+  font-size: 1vw;
   position: absolute;
   border: 0px solid black;
   border-radius: 5px;
-  right: 0%;
+  left: 0%;
   bottom: 0%;
 }
 /* .dndflow aside .description {
@@ -535,7 +536,7 @@ html {
 .nodesv2 {
   height: 5%;
   width: 60%;
-  padding: 2px;
+  padding: 1%;
   background-color: #616675;
   border: 2px solid #ffffff;
   border-radius: 8px;
@@ -543,6 +544,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: 1.2vw;
   cursor: grab;
   border-color: white;
   color: white;
@@ -587,6 +590,17 @@ html {
   visibility: hidden;
 }
 
+#popup2 {
+  border-radius: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #3c4048;
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
 .inputfield {
   width: 45%;
 }
@@ -610,20 +624,17 @@ html {
 } */
 
 #log {
-  width: 73%;
+  width: 76%;
   height: 25%;
   background-color: whitesmoke;
   border: 2px solid black;
   border-radius: 10px;
   position: fixed;
-  top: 70%;
+  top: 69.8%;
   left: 10%;
   visibility: visible;
   overflow-y: auto;
   scrollbar-width: none;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .small {
   height: auto;
@@ -854,7 +865,7 @@ select {
 .library {
   position: absolute;
   width: 70%;
-  height: 40px;
+  height: 6%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -862,7 +873,8 @@ select {
   background-color: #d9d9d9;
   color: black;
   font-family: "Averia Serif Libre", serif;
-  font-size: 20px;
+  font-size: 1.2vw;
+  text-align: center;
 }
 
 .libraryribbon {
