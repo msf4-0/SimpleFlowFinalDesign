@@ -81,13 +81,13 @@
     top: 105%;
   }
   to {
-    top: 85.5%;
+    top: 84%;
   }
 }
 
 @keyframes slideinbuttonred {
   from {
-    top: 85.5%;
+    top: 84%;
   }
   to {
     top: 105%;
@@ -98,13 +98,13 @@
     top: 105%;
   }
   to {
-    top: 74.5%;
+    top: 72.5%;
   }
 }
 
 @keyframes slideinbuttongreen {
   from {
-    top: 74.5%;
+    top: 72.5%;
   }
   to {
     top: 105%;
@@ -115,13 +115,13 @@
     top: 105%;
   }
   to {
-    top: 74.5%;
+    top: 72.5%;
   }
 }
 
 @keyframes slideinbuttonsf {
   from {
-    top: 74.5%;
+    top: 72.5%;
   }
   to {
     top: 105%;
@@ -132,13 +132,13 @@
     top: 105%;
   }
   to {
-    top: 85.5%;
+    top: 84%;
   }
 }
 
 @keyframes slideinbuttonlf {
   from {
-    top: 85.5%;
+    top: 84%;
   }
   to {
     top: 105%;
@@ -147,7 +147,7 @@
 
 @keyframes slideinbuttonlog {
   from {
-    top: 70%;
+    top: 69.8%;
   }
   to {
     top: 105%;
@@ -159,7 +159,7 @@
     top: 105%;
   }
   to {
-    top: 70%;
+    top: 69.8%;
   }
 }
 
@@ -262,7 +262,7 @@ html {
 .sf {
   position: absolute;
   top: 72.5%;
-  left: 88.5%;
+  left: 88%;
   width: 4vw;
   height: 4vw;
   font-size: 1vw;
@@ -278,7 +278,7 @@ html {
 .lf {
   position: absolute;
   top: 84%;
-  left: 88.5%;
+  left: 88%;
   width: 4vw;
   height: 4vw;
   font-size: 1vw;
@@ -538,7 +538,7 @@ html {
   width: 60%;
   padding: 1%;
   background-color: #616675;
-  border: 2px solid #ffffff;
+  border: 0.15vw solid #ffffff;
   border-radius: 8px;
   margin-bottom: 2px;
   display: flex;
@@ -765,10 +765,17 @@ button {
   justify-content: center;
   align-items: center;
   background-color: #d9d9d9;
-  border: 2px solid white;
   bottom: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.hoverEffect {
+  color: red; /* change color of text */
+  background-color: #d9d9d9;
+}
+.hoverEffect:hover {
+  background-color: rgb(217, 217, 217, 0.75); /* change color on hover */
 }
 .plusadd {
   position: absolute;
