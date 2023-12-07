@@ -337,7 +337,7 @@ function Flow() {
       newel.id = "inputname";
       newel.style.width = "50%";
       newel.style.height = "10%";
-      newel.style.fontSize = "20px";
+      newel.style.fontSize = "1.1vw";
       newel.style.color = "white";
       newel.style.backgroundColor = "#616675";
       newel.style.border = "none";
@@ -1543,6 +1543,7 @@ function Flow() {
             newel.style.fontSize = "90%";
             newel.style.color = "white";
             newel.style.fontSize = "3.2vw";
+            newel.style.marginRight = "7%";
             el.append(newel);
             document.getElementById("aside").append(el);
             var el = document.createElement("div");
@@ -1645,7 +1646,7 @@ function Flow() {
             var newel = document.createElement("div");
             newel.id = "addlibraryCont";
             newel.className = "outtercircleadd";
-            newel.style.width = "60%";
+            newel.style.width = "55%";
             el.append(newel);
 
             var addLibrary = document.createElement("div");
@@ -1653,10 +1654,8 @@ function Flow() {
             addLibrary.style.cursor = "pointer";
             addLibrary.innerHTML = "Add Library";
             addLibrary.style.alignSelf = "center";
-            addLibrary.style.fontSize = "1.3vw";
+            addLibrary.style.fontSize = "1.25vw";
             addLibrary.style.fontFamily = "Noto Sans, sans-serif";
-            addLibrary.style.marginTop = "10px";
-            addLibrary.style.marginBottom = "10px";
 
             /* the icon */
             var iconadd = document.createElement("div");
@@ -1664,9 +1663,9 @@ function Flow() {
             iconadd.innerHTML = '<i class="bi bi-plus-square-fill"></i>';
             iconadd.style.fontSize = "1.3vw";
             iconadd.style.alignSelf = "center";
-            iconadd.style.marginRight = "15px";
-            iconadd.style.marginTop = "10px";
-            iconadd.style.marginBottom = "10px";
+            iconadd.style.marginRight = "5%";
+            iconadd.style.marginTop = "3.5%";
+            iconadd.style.marginBottom = "3.5%";
 
             newel.append(iconadd);
             newel.append(addLibrary);
@@ -1719,19 +1718,23 @@ function Flow() {
     newel.style.display = "flex";
     newel.style.flexDirection = "column";
     newel.style.backgroundColor = "#3c4048";
+    newel.style.height = "100%";
+    newel.style.width = "100%";
     newel.style.borderRadius = "15px";
-    document.getElementById("popup").style.height = "auto";
-    document.getElementById("popup").style.width = "auto";
+    document.getElementById("popup").style.height = "70%";
+    document.getElementById("popup").style.width = "35%";
     document.getElementById("popup").append(newel);
 
     /* title */
     var title = document.createElement("div");
     title.id = "titlepopup";
     title.style.backgroundColor = "transparent";
-    title.style.fontSize = "25px";
+    title.style.width = "100%";
+    title.style.height = "10%";
     title.style.paddingTop = "40px";
     title.style.paddingBottom = "15px";
     title.style.color = "white";
+    title.style.textAlign = "center";
 
     /*the title text*/
     newel = document.createElement("div");
@@ -1739,8 +1742,6 @@ function Flow() {
     newel.innerHTML = "Saved Flows";
     newel.style.fontFamily = "DM Serif Display, sans-serif";
     newel.style.fontSize = "2.5vw";
-    newel.style.paddingRight = "150px";
-    newel.style.paddingLeft = "150px";
     newel.style.color = "white";
     title.append(newel);
 
@@ -1751,12 +1752,12 @@ function Flow() {
     list_cont.id = "contpopupcont";
     list_cont.style.backgroundColor = "#707070";
     list_cont.style.marginBottom = "15px";
-    list_cont.style.marginLeft = "30px";
-    list_cont.style.marginRight = "30px";
-    list_cont.style.height = "350px";
+    list_cont.style.height = "65%";
+    list_cont.style.width = "90%";
     list_cont.style.overflowY = "auto";
     list_cont.style.overflowX = "hidden";
     list_cont.style.borderRadius = "10px 10px 0 0";
+    list_cont.style.marginLeft = "5%";
 
     var cont = document.createElement("div");
     cont.id = "cont2";
@@ -1772,11 +1773,11 @@ function Flow() {
       .then((response) => response.json())
       .then((data) => {
         for (let i = 0; i < data["flowslist"].length; i++) {
-          var newel = document.createElement("p");
+          var newel = document.createElement("div");
           newel.id = "flow" + i + 1;
+          newel.className = "hoverEffect";
           newel.style.cursor = "pointer";
-          newel.style.fontSize = "20px";
-          newel.style.backgroundColor = "#D9D9D9";
+          newel.style.fontSize = "1.3vw";
           newel.style.textAlign = "center";
           newel.style.margin = "0";
           newel.style.color = "black";
@@ -1857,9 +1858,7 @@ function Flow() {
         newel = document.createElement("div");
         newel.id = "submittext";
         newel.innerHTML = "Close";
-        newel.style.fontSize = "1vw";
-        newel.style.marginTop = "3px";
-        newel.style.marginBottom = "3px";
+        newel.style.fontSize = "1.2vw";
         closed1.append(newel);
 
         closed1.onclick = function () {
