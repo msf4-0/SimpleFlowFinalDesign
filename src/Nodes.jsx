@@ -783,14 +783,14 @@ function CustomNode({ data, isConnectable }) {
         "custom_node"
       ].replaceAll("_", " ");
       if (data["inps"]["custom_node"].replaceAll("_", " ").length > 30) {
-        document.getElementById("nodelabel_" + ids[0]).style.fontSize = "12px";
+        document.getElementById("nodelabel_" + ids[0]).style.fontSize = "15px";
         document.getElementById("nodelabel_" + ids[0]).innerHTML =
           data["inps"]["custom_node"].replaceAll("_", " ") + "<br/>";
       } else if (
         data["inps"]["custom_node"].replaceAll("_", " ").length <= 30 &&
         data["inps"]["custom_node"].replaceAll("_", " ").length > 24
       ) {
-        document.getElementById("nodelabel_" + ids[0]).style.fontSize = "12px";
+        document.getElementById("nodelabel_" + ids[0]).style.fontSize = "15px";
         document.getElementById("nodelabel_" + ids[0]).innerHTML =
           data["inps"]["custom_node"].replaceAll("_", " ") + "<br/><br/>";
       }
