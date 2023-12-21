@@ -29,7 +29,7 @@ def node1():                    ---> node1 is node name
 
 ##funcs start
 
-newmethods={'Input_Model': {'0': ['file', 'Model Path', 'File']}, 'Torch_Classify': {'0': ['file', 'Image Path', 'File'],'1':['select','Device',["cpu","cuda"]]}, 'Select_Model': {},'Train_Torch_Classify': {'0': ['file', 'Dataset Path', 'Folder'], '1': ['text', 'Epochs Number'],'2':['select','Device',["cpu","cuda"]]},'Torch_Detect': {'0': ['file', 'Image Path', 'File'],'1':['select','Device',["cpu","cuda"]]}, 'Train_Torch_Detect': {'0': ['file', 'Dataset Path', 'Folder'], '1': ['text', 'Epochs Number'],'2':['select','Device',["cpu","cuda"]]}, 'Camera_Video_Input': {},'Select_Model': {'0': ['radio', 'Task', ['Classification', 'Object Detection'], 'Select Model'], '1': ['select', 'Select Model', '{\n    "Classification":["AlexNet","ConvNeXt","DenseNet","EfficientNet","EfficientNetV2","GoogLeNet","Inception V3","MaxVit","MNASNet","MobileNet V2","MobileNet V3","RegNet","ResNet","ResNeXt","ShuffleNet V2","SqueezeNet","SwinTransformer","VGG","VisionTransformer","Wide ResNet"],\n        "Object Detection":["Faster R-CNN","FCOS","RetinaNet"]\n}', 'Select Builder'], '2': ['select', 'Select Builder', '{\n            "AlexNet":["alexnet"],\n            "ConvNeXt":["convnext_tiny","convnext_small","convnext_base","convnext_large"],\n            "DenseNet":["densenet121","densenet161","densenet169","densenet201"],\n            "EfficientNet":["efficientnet_b0","efficientnet_b1","efficientnet_b2","efficientnet_b3","efficientnet_b4","efficientnet_b5","efficientnet_b6","efficientnet_b7"],\n            "EfficientNetV2":["efficientnet_v2_s","efficientnet_v2_m","efficientnet_v2_l"],\n            "GoogLeNet":["googlenet"],\n            "Inception V3":["inception_v3"],\n            "MaxVit":["maxvit_t"],\n            "MNASNet":["mnasnet0_5","mnasnet0_75","mnasnet1_0","mnasnet1_3"],\n            "MobileNet V2":["mobilenet_v2"],\n            "MobileNet V3":["mobilenet_v3_large","mobilenet_v3_small"],\n            "RegNet":["regnet_y_400mf","regnet_y_800mf","regnet_y_1_6gf","regnet_y_3_2gf","regnet_y_8gf","regnet_y_16gf","regnet_y_32gf","regnet_y_128gf","regnet_x_400mf","regnet_x_800mf","regnet_x_1_6gf","regnet_x_3_2gf","regnet_x_8gf","regnet_x_16gf","regnet_x_32gf"],\n            "ResNet":["resnet18","resnet34","resnet50","resnet101","resnet152"],\n            "ResNeXt":["resnext50_32x4d","resnext101_32x8d","resnext101_64x4d"],\n            "ShuffleNet V2":["shufflenet_v2_x0_5","shufflenet_v2_x1_0","shufflenet_v2_x1_5","shufflenet_v2_x2_0"],\n            "SqueezeNet":["squeezenet1_0","squeezenet1_1"],\n            "SwinTransformer":["swin_t","swin_s","swin_b","swin_v2_t","swin_v2_s","swin_v2_b"],\n            "VGG":["vgg11","vgg11_bn","vgg13","vgg13_bn","vgg16","vgg16_bn","vgg19","vgg19_bn"],\n            "VisionTransformer":["vit_b_16","vit_b_32","vit_l_16","vit_l_32","vit_h_14"],\n            "Wide ResNet":["wide_resnet50_2","wide_resnet101_2"],\n            "MASK R-CNN":["maskrcnn_resnet50_fpn","maskrcnn_resnet50_fpn_v2"],\n            "Faster R-CNN":["fasterrcnn_resnet50_fpn","fasterrcnn_resnet50_fpn_v2","fasterrcnn_mobilenet_v3_large_fpn","fasterrcnn_mobilenet_v3_large_320_fpn"],\n            "FCOS":["fcos_resnet50_fpn"],\n            "RetinaNet":["retinanet_resnet50_fpn","retinanet_resnet50_fpn_v2"]\n}']},'Train_YOLO': {'0': ['radio', 'Mode', ['Classification', 'Detection', 'Segmentation'], ['Select Model','Dataset Path']], '1': ['select', 'Select Model', '{\n    "Classification": ["YOLOv8n-cls","YOLOv8s-cls","YOLOv8m-cls","YOLOv8l-cls","YOLOv8x-cls"],\n    "Detection": ["YOLOv8n","YOLOv8s","YOLOv8m","YOLOv8l","YOLOv8x"],\n    "Segmentation": ["YOLOv8n-seg","YOLOv8s-seg","YOLOv8m-seg","YOLOv8l-seg","YOLOv8x-seg"]\n}'], '2': ['file', 'Dataset Path', '{\n    "Classification": "Folder",\n    "Detection": "File",\n    "Segmentation": "File"\n}'], '3': ['text', 'Epochs'], '4': ['text', 'Image Size'], '5': ['text', 'Batch Size'],'6':['select','Device',["cpu","cuda"]]},'Predict_YOLO': {'0': ['radio', 'Model', ['Pre-trained', 'Custom']], '1': ['radio', 'Mode', ['Classification', 'Detection', 'Segmentation'], 'Select Model'], '2': ['select', 'Select Model', '{\n    "Classification": ["YOLOv8n-cls","YOLOv8s-cls","YOLOv8m-cls","YOLOv8l-cls","YOLOv8x-cls"],\n    "Detection": ["YOLOv8n","YOLOv8s","YOLOv8m","YOLOv8l","YOLOv8x"],\n    "Segmentation": ["YOLOv8n-seg","YOLOv8s-seg","YOLOv8m-seg","YOLOv8l-seg","YOLOv8x-seg"]\n}'], '3': ['file', 'Image Path', 'File']},
+newmethods={'Input_Model': {'0': ['file', 'Model Path', 'File']}, 'Torch_Classify': {'0': ['file', 'Image Path', 'File'],'1':['select','Device',["cpu","cuda"]]}, 'Select_Model': {},'Train_Torch_Classify': {'0': ['file', 'Dataset Path', 'Folder'], '1': ['text', 'Epochs Number'],'2':['select','Device',["cpu","cuda"]]},'Torch_Detect': {'0': ['file', 'Image Path', 'File'],'1':['select','Device',["cpu","cuda"]]}, 'Train_Torch_Detect': {'0': ['file', 'Dataset Path', 'Folder'], '1': ['text', 'Epochs Number'],'2':['select','Device',["cpu","cuda"]]}, 'Camera_Video_Input': {},'Select_Model': {'0': ['radio', 'Task', ['Classification', 'Object Detection'], 'Select Model'], '1': ['select', 'Select Model', '{\n    "Classification":["AlexNet","ConvNeXt","DenseNet","EfficientNet","EfficientNetV2","GoogLeNet","Inception V3","MaxVit","MNASNet","MobileNet V2","MobileNet V3","RegNet","ResNet","ResNeXt","ShuffleNet V2","SqueezeNet","SwinTransformer","VGG","VisionTransformer","Wide ResNet"],\n        "Object Detection":["Faster R-CNN","FCOS","RetinaNet"]\n}', 'Select Builder'], '2': ['select', 'Select Builder', '{\n            "AlexNet":["alexnet"],\n            "ConvNeXt":["convnext_tiny","convnext_small","convnext_base","convnext_large"],\n            "DenseNet":["densenet121","densenet161","densenet169","densenet201"],\n            "EfficientNet":["efficientnet_b0","efficientnet_b1","efficientnet_b2","efficientnet_b3","efficientnet_b4","efficientnet_b5","efficientnet_b6","efficientnet_b7"],\n            "EfficientNetV2":["efficientnet_v2_s","efficientnet_v2_m","efficientnet_v2_l"],\n            "GoogLeNet":["googlenet"],\n            "Inception V3":["inception_v3"],\n            "MaxVit":["maxvit_t"],\n            "MNASNet":["mnasnet0_5","mnasnet0_75","mnasnet1_0","mnasnet1_3"],\n            "MobileNet V2":["mobilenet_v2"],\n            "MobileNet V3":["mobilenet_v3_large","mobilenet_v3_small"],\n            "RegNet":["regnet_y_400mf","regnet_y_800mf","regnet_y_1_6gf","regnet_y_3_2gf","regnet_y_8gf","regnet_y_16gf","regnet_y_32gf","regnet_y_128gf","regnet_x_400mf","regnet_x_800mf","regnet_x_1_6gf","regnet_x_3_2gf","regnet_x_8gf","regnet_x_16gf","regnet_x_32gf"],\n            "ResNet":["resnet18","resnet34","resnet50","resnet101","resnet152"],\n            "ResNeXt":["resnext50_32x4d","resnext101_32x8d","resnext101_64x4d"],\n            "ShuffleNet V2":["shufflenet_v2_x0_5","shufflenet_v2_x1_0","shufflenet_v2_x1_5","shufflenet_v2_x2_0"],\n            "SqueezeNet":["squeezenet1_0","squeezenet1_1"],\n            "SwinTransformer":["swin_t","swin_s","swin_b","swin_v2_t","swin_v2_s","swin_v2_b"],\n            "VGG":["vgg11","vgg11_bn","vgg13","vgg13_bn","vgg16","vgg16_bn","vgg19","vgg19_bn"],\n            "VisionTransformer":["vit_b_16","vit_b_32","vit_l_16","vit_l_32","vit_h_14"],\n            "Wide ResNet":["wide_resnet50_2","wide_resnet101_2"],\n            "MASK R-CNN":["maskrcnn_resnet50_fpn","maskrcnn_resnet50_fpn_v2"],\n            "Faster R-CNN":["fasterrcnn_resnet50_fpn","fasterrcnn_resnet50_fpn_v2","fasterrcnn_mobilenet_v3_large_fpn","fasterrcnn_mobilenet_v3_large_320_fpn"],\n            "FCOS":["fcos_resnet50_fpn"],\n            "RetinaNet":["retinanet_resnet50_fpn","retinanet_resnet50_fpn_v2"]\n}']},'Train_YOLO': {'0': ['radio', 'Mode', ['Classification', 'Detection', 'Segmentation'], ['Select Model','Dataset Path']], '1': ['select', 'Select Model', '{\n    "Classification": ["YOLOv8n-cls","YOLOv8s-cls","YOLOv8m-cls","YOLOv8l-cls","YOLOv8x-cls"],\n    "Detection": ["YOLOv8n","YOLOv8s","YOLOv8m","YOLOv8l","YOLOv8x"],\n    "Segmentation": ["YOLOv8n-seg","YOLOv8s-seg","YOLOv8m-seg","YOLOv8l-seg","YOLOv8x-seg"]\n}'], '2': ['file', 'Dataset Path', '{\n    "Classification": "Folder",\n    "Detection": "File",\n    "Segmentation": "File"\n}'], '3': ['text', 'Epochs'], '4': ['text', 'Image Size'], '5': ['text', 'Batch Size'],'6':['select','Device',["cpu","cuda"]]},'Predict_YOLO': {'0': ['radio', 'Model', ['Pre-trained', 'Custom']], '1': ['radio', 'Mode', ['Classification', 'Detection', 'Segmentation'], 'Select Model'], '2': ['select', 'Select Model', '{\n    "Classification": ["YOLOv8n-cls","YOLOv8s-cls","YOLOv8m-cls","YOLOv8l-cls","YOLOv8x-cls"],\n    "Detection": ["YOLOv8n","YOLOv8s","YOLOv8m","YOLOv8l","YOLOv8x"],\n    "Segmentation": ["YOLOv8n-seg","YOLOv8s-seg","YOLOv8m-seg","YOLOv8l-seg","YOLOv8x-seg"]\n}'], '3': ['file', 'Image Path', 'File'], '4': ['text','Confidence threshold'], '5': ['radio', 'Plot labels', ['True', 'False']], '6': ['select','Device',["cpu","cuda"]]},
             #'Train_Torch_Instance_Segmentation': {'0': ['file', 'Dataset Path', 'Folder'], '1': ['select', 'Device', ['cpu', 'cuda']], '2': ['text', 'Epochs Number']}, 'Torch_Instance_Segmentation': {'0': ['file', 'Image Path', 'File']}, 
             'Segment_Anything': {'0': ['file', 'Image Path', 'File']}}
 color={'Input_Model': '##0cb090ac660', 'Torch_Classify': '#33d16a', 'Select_Model': '##0cb090ac660','Train_Torch_Classify': '#33d16a','Torch_Detect': '#33d16a', 'Train_Torch_Detect': '#33d16a', 'Camera_Video_Input': '#33d16a','Select_Model': '#0cb090','Train_YOLO': '#0a6066','Predict_YOLO': '#33c7a2','Train_Torch_Instance_Segmentation': '#537efd',
@@ -41,6 +41,9 @@ color={'Input_Model': '##0cb090ac660', 'Torch_Classify': '#33d16a', 'Select_Mode
 def cameraloop(inps,model,name):
     vidcap = cv2.VideoCapture(0)
     time.sleep(1)
+    conf_thres = float(inps["vars"]["Confidence threshold"])
+    plot_labels = inps["vars"]["Plot labels"] == "True"
+    dev = 0 if inps["vars"]["Device"] == 'cuda' else 'cpu'
     while True:
         #time.sleep(0.1)
         if vidcap.isOpened():
@@ -59,8 +62,8 @@ def cameraloop(inps,model,name):
             print("Cannot open camera")
         #results = model(str(inps["path"]))
         try:
-            results = model(cam)
-            res_plotted = results[0].plot()
+            results = model.predict(cam, conf=conf_thres, device=dev)
+            res_plotted = results[0].plot(labels=plot_labels)
             img = Image.fromarray(res_plotted)
             img = img.resize((512,512))
             b, g, r = img.split()
@@ -987,14 +990,16 @@ def Train_YOLO(inps):
     else:
         data_dir = inps["prev_node"]["Dataset Path"]
     try:
-        model = YOLO(f"{inps['vars']['Select Model'].lower()}.pt")
+        if "prev_node" not in inps  or "model" not in inps["prev_node"]:
+            model = YOLO(f"{inps['vars']['Select Model'].lower()}.pt")
+        else:
+            model = YOLO(inps['prev_node']['model'])
     except: 
         wget.download(f"https://github.com/ultralytics/assets/releases/download/v0.0.0/{inps['model_name']}.pt")
         model = YOLO(f"{inps['vars']['Select Model'].lower()}.pt")
-    context_dict = {"datetime":str(datetime.datetime.now())}
     sys.stderr = open("../my-react-flow-app/YOLOtrain.txt", "w")
-    model.train(data=data_dir, epochs=int(inps["vars"]["Epochs"]), imgsz=int(inps["vars"]["Image Size"]),batch=int(inps["vars"]["Batch Size"]),name=inps["vars"]["Select Model"]+".__."+context_dict["datetime"]+"_"+os.path.basename(data_dir)+'_model.pt',device=inps["vars"]["Device"])
-    return {"model":inps["vars"]["Select Model"]+".__."+context_dict["datetime"]+"_"+os.path.basename(data_dir)+'_model.pt',"outimagenode":inps["output_node"]}
+    model.train(data=data_dir, epochs=int(inps["vars"]["Epochs"]), imgsz=int(inps["vars"]["Image Size"]),batch=int(inps["vars"]["Batch Size"]),device=inps["vars"]["Device"])
+    return {"outimagenode":inps["output_node"]}
 
 
 def Predict_YOLO(inps):
@@ -1009,6 +1014,9 @@ def Predict_YOLO(inps):
     if "CameraVideoInput" in inps["prev_node"]:
         cameraloop(inps,model,"YOLO")
     else:
+        conf_thres = float(inps["vars"]["Confidence threshold"])
+        plot_labels = inps["vars"]["Plot labels"]=="True"
+        dev = 0 if inps["vars"]["Device"] == '0' else 'cpu'
         if "Image Path" in inps["vars"]:
             if inps["vars"]["Image Path"] == "()" or inps["vars"]["Image Path"] == "":
                 vidcap = cv2.VideoCapture(int(inps["prev_node"]["id"]))
@@ -1023,10 +1031,10 @@ def Predict_YOLO(inps):
                 else:
                     print("Cannot open camera")
                 #results = model(str(inps["path"]))
-                results = model(cam)
+                results = model.predict(cam, conf=conf_thres, device=dev)
             else:
                 img = Image.open(str(inps['vars']['Image Path'])).convert('RGB')
-                results = model(img)
+                results = model.predict(img, conf=conf_thres, device=dev)
         else:
             vidcap = cv2.VideoCapture(int(inps["prev_node"]["id"]))
             if vidcap.isOpened():
@@ -1040,8 +1048,8 @@ def Predict_YOLO(inps):
             else:
                 print("Cannot open camera")
             #results = model(str(inps["path"]))
-            results = model(cam)
-        res_plotted = results[0].plot()
+            results = model.predict(cam, conf=conf_thres, device=dev)
+        res_plotted = results[0].plot(labels=plot_labels)
         img = Image.fromarray(res_plotted)
         img = img.resize((512,512))
         b, g, r = img.split()
