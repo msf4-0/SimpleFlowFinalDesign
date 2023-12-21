@@ -8,9 +8,6 @@ Pillow
 pyautogui
 tqdm
 wget
-torch
-torchvision
-torchsummary
 matplotlib
 albumentations
 pycocotools
