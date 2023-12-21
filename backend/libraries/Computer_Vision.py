@@ -41,6 +41,9 @@ color={'Input_Model': '##0cb090ac660', 'Torch_Classify': '#33d16a', 'Select_Mode
 def cameraloop(inps,model,name):
     vidcap = cv2.VideoCapture(0)
     time.sleep(1)
+    conf_thres = float(inps["vars"]["Confidence threshold"])
+    plot_labels = inps["vars"]["Plot labels"] == "True"
+    dev = 0 if inps["vars"]["Device"] == '0' else 'cpu'
     while True:
         #time.sleep(0.1)
         if vidcap.isOpened():
@@ -59,8 +62,8 @@ def cameraloop(inps,model,name):
             print("Cannot open camera")
         #results = model(str(inps["path"]))
         try:
-            results = model(cam)
-            res_plotted = results[0].plot()
+            results = model.predict(cam, conf=conf_thres, device=dev)
+            res_plotted = results[0].plot(labels=plot_labels)
             img = Image.fromarray(res_plotted)
             img = img.resize((512,512))
             b, g, r = img.split()
@@ -987,14 +990,16 @@ def Train_YOLO(inps):
     else:
         data_dir = inps["prev_node"]["Dataset Path"]
     try:
-        model = YOLO(f"{inps['vars']['Select Model'].lower()}.pt")
+        if "prev_node" not in inps  or "model" not in inps["prev_node"]:
+            model = YOLO(f"{inps['vars']['Select Model'].lower()}.pt")
+        else:
+            model = YOLO(inps['prev_node']['model'])
     except: 
         wget.download(f"https://github.com/ultralytics/assets/releases/download/v0.0.0/{inps['model_name']}.pt")
         model = YOLO(f"{inps['vars']['Select Model'].lower()}.pt")
-    context_dict = {"datetime":str(datetime.datetime.now())}
     sys.stderr = open("../my-react-flow-app/YOLOtrain.txt", "w")
-    model.train(data=data_dir, epochs=int(inps["vars"]["Epochs"]), imgsz=int(inps["vars"]["Image Size"]),batch=int(inps["vars"]["Batch Size"]),name=inps["vars"]["Select Model"]+".__."+context_dict["datetime"]+"_"+os.path.basename(data_dir)+'_model.pt',device=inps["vars"]["Device"])
-    return {"model":inps["vars"]["Select Model"]+".__."+context_dict["datetime"]+"_"+os.path.basename(data_dir)+'_model.pt',"outimagenode":inps["output_node"]}
+    model.train(data=data_dir, epochs=int(inps["vars"]["Epochs"]), imgsz=int(inps["vars"]["Image Size"]),batch=int(inps["vars"]["Batch Size"]),device=inps["vars"]["Device"])
+    return {"outimagenode":inps["output_node"]}
 
 
 def Predict_YOLO(inps):
@@ -1009,6 +1014,9 @@ def Predict_YOLO(inps):
     if "CameraVideoInput" in inps["prev_node"]:
         cameraloop(inps,model,"YOLO")
     else:
+        conf_thres = float(inps["vars"]["Confidence threshold"])
+        plot_labels = inps["vars"]["Plot labels"]=="True"
+        dev = 0 if inps["vars"]["Device"] == '0' else 'cpu'
         if "Image Path" in inps["vars"]:
             if inps["vars"]["Image Path"] == "()" or inps["vars"]["Image Path"] == "":
                 vidcap = cv2.VideoCapture(int(inps["prev_node"]["id"]))
@@ -1023,10 +1031,10 @@ def Predict_YOLO(inps):
                 else:
                     print("Cannot open camera")
                 #results = model(str(inps["path"]))
-                results = model(cam)
+                results = model.predict(cam, conf=conf_thres, device=dev)
             else:
                 img = Image.open(str(inps['vars']['Image Path'])).convert('RGB')
-                results = model(img)
+                results = model.predict(img, conf=conf_thres, device=dev)
         else:
             vidcap = cv2.VideoCapture(int(inps["prev_node"]["id"]))
             if vidcap.isOpened():
@@ -1040,8 +1048,8 @@ def Predict_YOLO(inps):
             else:
                 print("Cannot open camera")
             #results = model(str(inps["path"]))
-            results = model(cam)
-        res_plotted = results[0].plot()
+            results = model.predict(cam, conf=conf_thres, device=dev)
+        res_plotted = results[0].plot(labels=plot_labels)
         img = Image.fromarray(res_plotted)
         img = img.resize((512,512))
         b, g, r = img.split()
