@@ -1,0 +1,5 @@
+1. Removed torch, torchvision and torchsummary from backend/requirements.txt
+2. Updated README.md to provide the options to install GPU or CPU version of PyTorch.
+3. Modified Train_YOLO in Computer_Vision.py so that a saved model can be trained. Removed the parameter 'name' from model.train() method which caused error.
+4. Added the option to specify confidence threshold and device in Predict_YOLO and cameraloop (Computer_Vision.py). Added the options to enable or disable the labels on bounding boxes.
+5. Added a new library named Inspection with a new component that integrates Predict_YOLO and MQTT_Publish.
