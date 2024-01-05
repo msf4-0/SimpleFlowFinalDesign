@@ -57,7 +57,7 @@ In cmd on Windows or Terminal on Linux:
 git clone https://github.com/simpleflowgui/SimpleFlow
 ```
 
-## 5. Create a new React project using Vite
+## 6. Create a new React project using Vite
 ```code
 cd SimpleFlow
 npm create vite@latest my-react-flow-app -- --template react
@@ -66,7 +66,7 @@ cd my-react-flow-app
 npm install
 ```
 
-## 6. Run the setup file
+## 7. Run the setup file
 
 (Linux)
 ```code
@@ -81,7 +81,7 @@ cd ..
 setup.cmd
 ```
 
-## 7. Run the install file (Windows only)
+## 8. Run the install file (Windows only)
 If you have a CUDA-capable GPU, you can install the GPU version of PyTorch. You can verify that you have a CUDA-capable GPU through the Display Adapters section in the Windows Device Manager. Here you will find the vendor name and model of your graphics card(s). If you have an NVIDIA card that is listed in https://developer.nvidia.com/cuda-gpus, that GPU is CUDA-capable. To install the GPU version of PyTorch along with other packages, run the following command:
 ```code
 install_gpu.cmd
@@ -93,7 +93,7 @@ install.cmd
 ```
 
 
-## 8. Run SimpleFlow
+## 9. Run SimpleFlow
 (Linux)
 ```code
 simpleflow
