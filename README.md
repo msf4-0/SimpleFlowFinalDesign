@@ -70,20 +70,17 @@ sudo chmod +x setup.sh
 ```code
 cd ..
 setup.cmd
+```
+
+## 7. Run the install file (Windows only)
+If you have a CUDA-capable GPU, you can install the GPU version of PyTorch. You can verify that you have a CUDA-capable GPU through the Display Adapters section in the Windows Device Manager. Here you will find the vendor name and model of your graphics card(s). If you have an NVIDIA card that is listed in https://developer.nvidia.com/cuda-gpus, that GPU is CUDA-capable. To install the GPU version of PyTorch along with other packages, run the following command:
+```code
+install_gpu.cmd
+```
+
+Otherwise, install the CPU version of PyTorch along with other packages:
+```code
 install.cmd
-```
-
-## 7. Install PyTorch (Windows)
-If you have a CUDA-capable GPU, you can install the GPU version of PyTorch. You can verify that you have a CUDA-capable GPU through the Display Adapters section in the Windows Device Manager. Here you will find the vendor name and model of your graphics card(s). If you have an NVIDIA card that is listed in https://developer.nvidia.com/cuda-gpus, that GPU is CUDA-capable. To install the GPU version of PyTorch, run the following command:
-```code
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-pip install torchsummary
-```
-
-Otherwise, install the CPU version of PyTorch:
-```code
-pip3 install torch torchvision torchaudio
-pip install torchsummary
 ```
 
 ## 8. Run SimpleFlow
