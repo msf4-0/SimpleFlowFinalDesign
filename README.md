@@ -40,7 +40,16 @@ sudo apt-get install git
 
 Download and install https://git-scm.com/download/win
 
-## 4. Clone SimpleFlow github repository
+## 4. Clone xArm-Python-SDK github repository
+Run the following command:
+```code
+git clone https://github.com/xArm-Developer/xArm-Python-SDK.git
+cd xArm-Python-SDK
+python setup.py install
+cd ..
+```
+
+## 5. Clone SimpleFlow github repository
 
 In cmd on Windows or Terminal on Linux:
 
@@ -82,6 +91,7 @@ Otherwise, install the CPU version of PyTorch along with other packages:
 ```code
 install.cmd
 ```
+
 
 ## 8. Run SimpleFlow
 (Linux)
