@@ -1,4 +1,4 @@
-pip install -r requirements.txt
+pip install -r requirements_gpu.txt
 cd ..
 cd my-react-flow-app
 rmdir /S src
