@@ -16,3 +16,4 @@ matplotlib
 albumentations
 pycocotools
 ultralytics
+easyocr
