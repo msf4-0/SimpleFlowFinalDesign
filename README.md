@@ -40,8 +40,8 @@ sudo apt-get install git
 
 Download and install https://git-scm.com/download/win
 
-## 4. Clone xArm-Python-SDK github repository
-Run the following command:
+## 4. (Optional) Clone xArm-Python-SDK github repository
+If you want to download and install the SDK to control the uFactory xArm, run the following command:
 ```code
 git clone https://github.com/xArm-Developer/xArm-Python-SDK.git
 cd xArm-Python-SDK
