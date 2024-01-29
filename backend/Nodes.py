@@ -68,7 +68,8 @@ def ImageFlip(inps):
 
 
 def CameraVideoInput(inps):
-    return {"CameraVideoInput":inps["camindex"],"outimagenode":inps["output_node"],"id":inps["camindex"]}
+    camindex = "0" if "camindex" not in inps else inps["camindex"]
+    return {"CameraVideoInput":camindex,"outimagenode":inps["output_node"],"id":inps["camindex"]}
 
 def SelectCamera(inps):
     return {"id":inps["camindex"],"outimagenode":inps["output_node"]}
