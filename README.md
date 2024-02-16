@@ -54,7 +54,7 @@ cd ..
 In cmd on Windows or Terminal on Linux:
 
 ```code
-git clone https://github.com/simpleflowgui/SimpleFlow
+git clone https://github.com/msf4-0/SimpleFlowFinalDesign
 ```
 
 ## 6. Create a new React project using Vite
